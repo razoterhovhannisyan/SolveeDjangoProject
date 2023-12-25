@@ -1,0 +1,58 @@
+Internal Server Error: /accounts/google/login/callback/
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\allauth\socialaccount\providers\oauth2\views.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\allauth\socialaccount\providers\oauth2\views.py", line 162, in dispatch
+    return complete_social_login(request, login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\allauth\socialaccount\helpers.py", line 197, in complete_social_login
+    sociallogin.lookup()
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\allauth\socialaccount\models.py", line 282, in lookup
+    provider_id = self.account.get_provider().id
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\allauth\socialaccount\models.py", line 141, in get_provider
+    provider = self._provider = adapter.get_provider(
+                                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\allauth\socialaccount\adapter.py", line 204, in get_provider
+    app = self.get_app(request, provider=provider)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\allauth\socialaccount\adapter.py", line 286, in get_app
+    raise MultipleObjectsReturned
+django.core.exceptions.MultipleObjectsReturned
+"GET /accounts/google/login/callback/?state=K8cJ3h1EmdrLF1CJ&code=4%2F0AfJohXnTiXF--vl8n1rgLK4ShlWwgdo-lw2d8-D5qR8B-EJj7_tngsXyRNeKFuWVXp1wlg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none HTTP/1.1" 500 103057
+Internal Server Error: /accounts/facebook/login/callback/
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\allauth\socialaccount\providers\oauth2\views.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\allauth\socialaccount\providers\oauth2\views.py", line 162, in dispatch
+    return complete_social_login(request, login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\allauth\socialaccount\helpers.py", line 197, in complete_social_login
+    sociallogin.lookup()
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\allauth\socialaccount\models.py", line 282, in lookup
+    provider_id = self.account.get_provider().id
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\allauth\socialaccount\models.py", line 141, in get_provider
+    provider = self._provider = adapter.get_provider(
+                                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\allauth\socialaccount\adapter.py", line 204, in get_provider
+    app = self.get_app(request, provider=provider)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\DjangoRestSolveeProject\env\Lib\site-packages\allauth\socialaccount\adapter.py", line 286, in get_app
+    raise MultipleObjectsReturned
+django.core.exceptions.MultipleObjectsReturned
+"GET /accounts/facebook/login/callback/?code=AQB8HyvUgg8GHjq0rdTxK6k3jRFbc1G9el_j8TrgmDwREpC5X7hH7EAHD9fH3bYzxFjicU8ZyDToqC4JHUbvAGbwqYrA-P3eotEutApEkO0YSSLH31FyYIBLur6caplso5O2cIeMgLvM0E2eKCp3gA90wQwSkz8N1fL04JoAiE4zzXhJNcgA1w52eblt2RFFZNFDJMvVim-fgtrHRfySb1McWiaE0i1x_HQH_-2bJdEwKfJOEkC1cldk0UBpkHyDr42YqzUZoZTl8r5iNa1OY5EF3eI4sgLccu0Ee0QKunYK1wI_r7Hf2volxjOgorRNmAFQI-GTXIrqbNsX8a4QSAQwG-hBm3_crZ2R_WBFMWwqTPnbMFLNNqGnsfVMDnphED5UCqZm9pJBj_8wpRlLCTFs&state=3mC8du9xxRf8AnXy HTTP/1.1" 500 102862
