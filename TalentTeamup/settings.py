@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-uumm@d=m7bf1y1iedmcc85ap%p)-ql5_a7l59(+dpq9l_ax#hg'
+SECRET_KEY = 'SECRET_KEY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -69,7 +69,7 @@ FACEBOOK_APP_SECRET = os.environ.get('FACEBOOK_APP_SECRET')
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
-SITE_ID = 3
+SITE_ID = 'SITE_ID'
 
 
 SOCIALACCOUNT_PROVIDERS = {
@@ -97,27 +97,6 @@ LOGOUT_REDIRECT_URL = '/'
 
 
 ASGI_APPLICATION = 'TalentTeamup.routing.application'
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': 'debug.log',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
-            'propagate': True,
-        },
-    },
-}
-
-
 
 
 MIDDLEWARE = [
@@ -152,8 +131,6 @@ SIMPLE_JWT = {
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
-    # 'social_core.backends.facebook.FacebookOAuth2',
-    # 'social_core.backends.google.GoogleOAuth2',
 ]
 CHANNEL_LAYERS = {
     "default": {
@@ -248,7 +225,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "rterhovhannisyan7777@gmail.com"
-EMAIL_HOST_PASSWORD = "slypnfuvnrnpbeyt"
+EMAIL_HOST_USER = "EMAIL_HOST_USER"
+EMAIL_HOST_PASSWORD = "EMAIL_HOST_PASSWORD"
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'rterhovhannisyan7777@gmail.com'
+DEFAULT_FROM_EMAIL = 'DEFAULT_FROM_EMAIL'
