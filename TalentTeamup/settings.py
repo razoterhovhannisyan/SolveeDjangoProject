@@ -57,12 +57,12 @@ INSTALLED_APPS = [
 load_dotenv()
 
 
-GOOGLE_CLIENT_ID = os.environ.get('295336127144-cb9qftpeb7em4gliajbt8mkk11mq18at.apps.googleusercontent.com')
-GOOGLE_CLIENT_SECRET = os.environ.get('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')
+GOOGLE_CLIENT_ID = os.environ.get('GOOGLE_CLIENT_ID')
+GOOGLE_CLIENT_SECRET = os.environ.get('GOOGLE_CLIENT_SECRET')
 
 
-FACEBOOK_APP_ID = os.environ.get('646875040855183')
-FACEBOOK_APP_SECRET = os.environ.get('7a3aebb5927f78efc9e095829d384af6')
+FACEBOOK_APP_ID = os.environ.get('FACEBOOK_APP_ID')
+FACEBOOK_APP_SECRET = os.environ.get('FACEBOOK_APP_SECRET')
 
 
 
