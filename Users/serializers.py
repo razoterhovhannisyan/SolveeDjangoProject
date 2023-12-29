@@ -53,18 +53,3 @@ class RegisterSerializer(serializers.ModelSerializer):
 class LoginSerializer(serializers.Serializer):
     email = serializers.EmailField()
     password = serializers.CharField(write_only=True)
-
-
-
-
-class TeamUserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = TeamUser
-        fields = '__all__'
-
-
-
-class SoloUserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = SoloUser
-        fields = '__all__'

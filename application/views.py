@@ -14,6 +14,8 @@ from rest_framework.permissions import IsAuthenticated
 
 class CreateTeamView(APIView):
     def post(self, request, format=None):
+        print(request.user.user_type)
+        print(type(request.user))
         try:
             user = models.TeamUser.objects.get(email=request.user.email)
         except models.TeamUser.DoesNotExist:
@@ -110,6 +112,7 @@ class TeamReviewsView(APIView):
 class BookingRequestTeamView(APIView):
     def post(self, request):
         solo_user = request.user
+        print(request.user.user_type)
         if solo_user.user_type != 'Solo':
             return Response({'message': 'You dont have permission to send Booking request'}, status=status.HTTP_403_FORBIDDEN)
 

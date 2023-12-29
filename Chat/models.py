@@ -15,7 +15,7 @@ class ChatMessage(models.Model):
         return f"{self.sender} to {self.receiver} at {self.timestamp}"
 
 
-class Conversation(models.Model):
+class Conversation(models.Model): # only gives who talks together(view)
     team_user = models.ForeignKey('Users.TeamUser', on_delete=models.SET_NULL, null=True, related_name='teams_conversations')
     solo_user = models.ForeignKey('Users.SoloUser', on_delete=models.SET_NULL, null=True, related_name='solos_conversations')
     messages = models.ManyToManyField(ChatMessage, related_name='conversation_messages', blank=True)
